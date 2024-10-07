@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>constants are changing</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet">
+    <body>
+      <nav>
+        <label id="lblGreetings"></label>
+	<span id="12htime"></span>
+	<h3>links</h3>
+	<div id="main_window">
+	  <ul>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	      <div class="gridpicture">
+		<img src="pics/icon1.jpg" width="200" height="200">
+	      </div>
+	      	      <div class="gridpicture">
+			<img src="pics/icon2.jpg" width="200" height="200">
+			 </div>
+		 <div class="gridpicture">	
+	    	   <img src="pics/icon3.jpg" width="200" height="200">
+		    </div>
+	  <li><a href="https://outlook.com">outlook</a></li>
+	  <li><a href="https://tumblr.com">tumblr</a></li>
+	  <li><a href="https://www.reddit.com/r/kpop">kpop</a></li>
+	  <li><a href="https://youtube.com">youtube</a></li>
+	  <li><a href="https://twitter.com">twitter</a></li>
+	  <li><a href="https://reddit.com/autisminwomen">aut</a></li>
+	  <li><a href="https://notion.so">notion</a></li>
+	  <li><a href="https://reddit.com">reddit</a></li>
+	  <li><a href="https://reddit.com/r/competitiveoverwatch">cow</a></li>
+	  <li><a href="https://y2mate.nu/MKCh/">music</a></li>
+	  <li><a href="https://pinterest.com">pint</a></li>
+	  <li><a href="https://www.reddit.com/r/apexlegends">apex</a></li>
+	</ul>
+	</div>
+      </nav>
+    </body>
+  </head>
+  <script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 5)
+        greet = 'go sleep!!';
+    else if (hrs >= 5 && hrs <= 11)
+	greet = 'morning!!';
+    else if (hrs >= 11 && hrs <= 19)
+        greet = '111';
+    else if (hrs >= 19 && hrs <= 24)
+        greet = 'night night!!';
+
+    document.getElementById('lblGreetings').innerHTML =
+        '<h1>' + greet + '</h1>';
+	</script>
+  <script>
+    let formattedTime = new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
+    document.getElementById("12htime").innerHTML = '<h2> the time is ' + formattedTime + '</h2>';
+    </script>
+  </html>
